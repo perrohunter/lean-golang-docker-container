@@ -1,0 +1,10 @@
+# Create a minimal container to run a Golang static binary
+
+FROM tianon/true
+MAINTAINER Perro Hunter "hi@perrohunter.com"
+EXPOSE 8484
+
+ADD main /
+
+ENV PORT=8484
+CMD ["/main"]
